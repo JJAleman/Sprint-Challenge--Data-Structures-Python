@@ -14,4 +14,16 @@ class RingBuffer:
             self.tracking_index = 0
 
     def get(self):
-        pass
+        return self.storage
+
+buffer = RingBuffer(3)
+print(buffer.get())
+buffer.append("a")
+buffer.append("b")
+buffer.append("c") 
+print(buffer.get())
+buffer.append("d")
+print(buffer.get())
+buffer.append("e")
+buffer.append("f")
+print(buffer.get())
